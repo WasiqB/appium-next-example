@@ -1,5 +1,6 @@
 package com.github.wasiqb;
 
+import static io.appium.java_client.service.local.flags.GeneralServerFlag.ALLOW_INSECURE;
 import static io.appium.java_client.service.local.flags.GeneralServerFlag.BASEPATH;
 import static io.appium.java_client.service.local.flags.GeneralServerFlag.SESSION_OVERRIDE;
 import static io.appium.java_client.service.local.flags.GeneralServerFlag.USE_DRIVERS;
@@ -73,6 +74,7 @@ public class DriverManager {
             .withArgument (BASEPATH, "/wd/hub")
             .withArgument (USE_DRIVERS, "uiautomator2")
             .withArgument (SESSION_OVERRIDE)
+            .withArgument (ALLOW_INSECURE, "chromedriver_autodownload")
             .build ();
     }
 
