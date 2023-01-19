@@ -16,6 +16,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.util.HashMap;
 
+import io.appium.java_client.Setting;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -46,7 +47,7 @@ public class DriverManager {
             serverUrl = this.service.getUrl ();
         }
         this.driver = new AndroidDriver (serverUrl, capabilities);
-        this.driver.setSetting ("ignoreUnimportantViews", true);
+        this.driver.setSetting (Setting.IGNORE_UNIMPORTANT_VIEWS, true);
     }
 
     public void close () {

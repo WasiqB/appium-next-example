@@ -18,7 +18,7 @@
 ### Local run
 
 ```shell
-mvn clean install -DdeviceName=<emulator_name> -DdeviceVersion=<emulator_version>
+mvn clean install -target=local -DdeviceName=<emulator_name> -DdeviceVersion=<emulator_version>
 ```
 
 ### LT Cloud run

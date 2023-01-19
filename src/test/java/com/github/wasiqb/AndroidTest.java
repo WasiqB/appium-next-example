@@ -1,14 +1,11 @@
 package com.github.wasiqb;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 import java.time.Duration;
 
 import com.github.wasiqb.pages.HybridPage;
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -43,13 +40,11 @@ public class AndroidTest {
 
         this.driver.context ("WEBVIEW_com.lambdatest.proverbial");
 
-        final var title = wait.until (visibilityOfElementLocated (By.tagName ("h1")))
-            .getText ();
-        assertThat (title).isEqualTo ("Cross Browser\nTesting Cloud");
+        assertThat (hybridPage.webTitle ()).isEqualTo ("Cross Browser\nTesting Cloud");
 
         this.driver.context ("NATIVE_APP");
 
-        final var browserTab = this.driver.findElement (AppiumBy.accessibilityId ("Browser"));
-        assertThat (browserTab.isEnabled ()).isTrue ();
+        assertThat (hybridPage.browserTab ()
+            .isEnabled ()).isTrue ();
     }
 }
