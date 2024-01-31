@@ -63,8 +63,8 @@ public class DriverManager {
         this.driver = new AndroidDriver (serverUrl, capabilities);
         this.driver.setSetting (Setting.IGNORE_UNIMPORTANT_VIEWS, true);
 
-        startStreaming ();
-        startRecording ();
+       startStreaming ();
+       startRecording ();
         swipe ();
     }
 

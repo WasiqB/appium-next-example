@@ -40,7 +40,7 @@ public class AndroidTest {
 
         this.driver.context ("WEBVIEW_com.lambdatest.proverbial");
 
-        assertThat (hybridPage.webTitle ()).isEqualTo ("Cross Browser\nTesting Cloud");
+        assertThat (hybridPage.webTitle ()).isEqualTo ("Next-Generation Mobile Apps and Cross Browser Testing Cloud");
 
         this.driver.context ("NATIVE_APP");
 
