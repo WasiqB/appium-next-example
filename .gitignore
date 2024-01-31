@@ -3,3 +3,4 @@
 /logs
 /videos
 .DS_Store
+*.iml
